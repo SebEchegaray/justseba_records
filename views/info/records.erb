@@ -1,0 +1,21 @@
+<h2 class="main_style-h2">Records</h2>
+
+<a href="/add" class="record_link">Add new record</a>
+
+<section class="records_grid">
+  <% info.each do |record| %>
+    <a href="" class="each_record-link">
+    <section class="each_record">
+      <div class="info">
+        <h3 class="main_style-h3"><%= record["record_name"] %></h3>
+        <p class="main_style-p"><span class="black_text">Artist: </span><%= record["artist"] %></p>
+        <p class="main_style-p"><span class="black_text">Release: </span><%= record["year_release"] %></p>
+        <p class="main_style-p"><span class="black_text">Label: </span><%= record["label"] %></p>
+      </div>
+      <aside>
+        <img src="<%= record["artwork_url"] %>" alt="">
+      </aside>
+    </section>
+    </a>
+  <% end %>
+</section>

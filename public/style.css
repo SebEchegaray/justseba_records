@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron:wght@500&family=Righteous&display=swap');
+/*
+font-family: 'Monoton', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Righteous', cursive;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background: rgba(117, 117, 117, 0.6); */
+  background: rgb(224, 155, 26);
+  font-family: 'Righteous', cursive;
+}
+
+html {
+  font-size: 10px;
+}
+
+/* MAIN HEADER */
+.main_header {
+  width: 100%; height: 35rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 0.3rem 0.8rem rgba(255,255,255,0.8);
+  background-image: url('https://bavotasan.com/wp-content/uploads/2008/11/record-set.png');
+}
+.main_nav {
+  width: 100%;
+  height: 5.5rem;
+  background-image: linear-gradient(to right, rgb(44, 135, 209), rgba(0,0,0,1));
+}
+.main_nav ul {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.main_nav ul li {
+  width: 20rem; height: 5.5rem;
+  background: rgb(224, 155, 26);
+  text-align: center;
+  list-style-type: none;
+  border-right: 1px solid rgb(255,255,255);
+  transition: all 0.2s;
+}
+.main_nav ul li:last-of-type {
+  border-left: 1px solid rgb(255,255,255);
+}
+.main_nav ul li a {
+  padding: 1.6rem 5rem;
+  font-size: 3rem;
+  line-height: 5rem;
+  color: rgb(255,255,255);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.main_nav ul li a:hover {
+  color: rgb(224, 155, 26);
+}
+.main_nav ul li:hover {
+  background: rgb(50, 63, 73);
+}
+
+.main_headline {
+  font-family: 'Monoton', cursive;
+  font-weight: 400;
+  font-size: 7rem;
+  padding: 0 3rem;
+  background: rgba(255,255,255,0.8);
+}
+.main_headline span {
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  font-size: 10rem;
+}
+.main_style-h2 {
+  font-size: 4rem;
+  line-height: 5rem;
+  padding: 0 3rem;
+  color: rgb(255,255,255);
+  text-shadow: 0 0 0.5rem rgb(44, 135, 209);
+}
+/* MAIN HEADER */
+
+/* RECORDS PAGE */
+.record_link {
+  position: fixed;
+  bottom: 1%;
+  right: 0.5%;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  color: rgb(255,255,255);
+  border: 1px solid rgb(255,255,255);
+  box-shadow: 0 0 0.5rem rgb(255,255,255);
+  border-radius: 5px;
+  background: rgb(44, 135, 209);
+  transition: all 0.2s;
+}
+.record_link:hover {
+  color: rgb(44, 135, 209);
+  background: rgb(50, 63, 73);
+}
+
+.records_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 600px);
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 30px 0;
+}
+.each_record {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content:flex-end;
+  gap: 2rem;
+  padding: 2rem;
+  color: rgb(255,255,255);
+  text-shadow: 0 0 0.5rem rgb(224, 155, 26);
+  background: rgba(44, 135, 209,0.8);
+  box-shadow: 0 0 1rem rgb(255,255,255);
+  border-radius: 2rem;
+}
+.each_record img {
+  width: 22rem;
+}
+.each_record-link {
+  text-decoration: none;
+}
+
+.main_style-h3 {
+  font-size: 3.5rem;
+  line-height: 5.5rem;
+  text-transform: capitalize;
+}
+.main_style-p {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  text-transform: capitalize;
+}
+/* RECORDS PAGE */
+
+/* ADD NEW PAGE */
+.main_style-form {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 3rem;
+  margin-top: 2rem;
+  background: rgba(44, 135, 209,0.8);
+}
+.main_style-label {
+  color: rgb(255,255,255);
+  font-size: 2rem;
+}
+.main_style-input {
+  width: 50rem;
+  height: 3.5rem;
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Righteous', cursive;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+.main_style-btn-input {
+  width: 25rem;
+  height: 3.5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 2rem;
+  font-weight: 600;
+  background: rgb(224, 155, 26);
+  color: rgb(255,255,255);
+  transition: all 0.2s;
+}
+.main_style-btn-input:hover {
+  box-shadow: 0 0 0.5rem rgb(255,255,255);
+  background: rgb(255,255,255);
+  color: rgb(224, 155, 26);
+}
+/* ADD NEW PAGE */
+
+/* GENERAL STYLES */
+.black_text {
+  color: rgb(0,0,0);
+  font-weight: 600;
+}
