@@ -31,3 +31,15 @@ get '/info/:id/edit' do |id|
 
   erb :'info/new', locals: { edit: true, record: record_edit[0] }
 end
+
+put '/new/:id/edit' do |id|
+  record_name = params[:record_name]
+  artist = params[:artist]
+  year_release = params[:year_release]
+  artwork_url = params[:artwork_url]
+  label = params[:label]
+
+  update_record(record_name, artist, year_release, artwork_url, label, id)
+
+  redirect "/view/#{id}"
+end

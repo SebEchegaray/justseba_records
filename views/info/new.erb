@@ -1,6 +1,16 @@
+<% form_action = '/new' %>
+<% action = 'ADD RECORD' %>
+<% if edit %>
+  <% form_action += '/' + record["id"] + '/edit' %>
+  <% action = 'EDIT' %>
+<% end %>
+
 <h2 class="main_style-h2">New record</h2>
 
-<form action="/new" method="POST" class="main_style-form">
+<form action="<%= form_action %>" method="POST" class="main_style-form">
+  <% if edit %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end %>
   <label class="main_style-label" for="record_name">Record name:</label>
   <input type="text" name="record_name" class="main_style-input" value="<% if edit %><%= record["record_name"] %><% end %>">
 
@@ -16,9 +26,5 @@
   <label class="main_style-label" for="label">Label:</label>
   <input type="text" name="label" class="main_style-input" value="<% if edit %><%= record["label"] %><% end %>">
 
-  <% action = 'ADD RECORD' %>
-  <% if edit %>
-    <% action = 'EDIT' %>
-  <% end %>
   <input type="submit" name="Submit" value="<%= action %>" class="main_style-btn-input">
 </form>
