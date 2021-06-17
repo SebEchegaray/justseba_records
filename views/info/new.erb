@@ -2,19 +2,23 @@
 
 <form action="/new" method="POST" class="main_style-form">
   <label class="main_style-label" for="record_name">Record name:</label>
-  <input type="text" name="record_name" class="main_style-input">
+  <input type="text" name="record_name" class="main_style-input" value="<% if edit %><%= record["record_name"] %><% end %>">
 
   <label class="main_style-label" for="artist">Artist:</label>
-  <input type="text" name="artist" class="main_style-input">
+  <input type="text" name="artist" class="main_style-input" value="<% if edit %><%= record["artist"] %><% end %>">
 
   <label class="main_style-label" for="year_release">Year release:</label>
-  <input type="text" name="year_release" class="main_style-input">
+  <input type="text" name="year_release" class="main_style-input" value="<% if edit %><%= record["year_release"] %><% end %>">
 
   <label class="main_style-label" for="artwork_url">Artwork URL:</label>
-  <input type="text" name="artwork_url" class="main_style-input">
+  <input type="text" name="artwork_url" class="main_style-input" value="<% if edit %><%= record["artwork_url"] %><% end %>">
   
   <label class="main_style-label" for="label">Label:</label>
-  <input type="text" name="label" class="main_style-input">
+  <input type="text" name="label" class="main_style-input" value="<% if edit %><%= record["label"] %><% end %>">
 
-  <input type="submit" name="Submit" value="SUBMIT" class="main_style-btn-input">
+  <% action = 'ADD RECORD' %>
+  <% if edit %>
+    <% action = 'EDIT' %>
+  <% end %>
+  <input type="submit" name="Submit" value="<%= action %>" class="main_style-btn-input">
 </form>

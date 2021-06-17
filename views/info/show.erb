@@ -1,0 +1,15 @@
+<section class="show">
+  <div>
+    <h3 class="main_style-h3"><%= record_info["record_name"] %></h3>
+    <p class="main_style-p"><span class="black_text">Artist: </span><%= record_info["artist"] %></p>
+    <p class="main_style-p"><span class="black_text">Release: </span><%= record_info["year_release"] %></p>
+    <p class="main_style-p"><span class="black_text">Label: </span><%= record_info["label"] %></p>
+    <!--<a href="/new" class="main_style-btn-edit">EDIT</a>-->
+    <form action="/info/<%= record_info["id"] %>/edit" class="show_form">
+      <input type="submit" name="Submit" value="EDIT" class="main_style-btn-input-rev">
+    </form>
+  </div>
+  <aside>
+    <img src="<%= record_info["artwork_url"] %>" alt="">
+  </aside>
+</section>

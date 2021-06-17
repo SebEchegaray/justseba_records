@@ -5,7 +5,7 @@ get '/records' do
 end
 
 get '/add' do
-  erb :'info/new'
+  erb :'info/new', locals: { edit: false }
 end
 
 post '/new' do
@@ -18,4 +18,16 @@ post '/new' do
   add_record(record_name, artist, year_release, artwork_url, label)
 
   redirect '/records'
+end
+
+get '/view/:id' do |id|
+  record_info = show_record(id)
+
+  erb :'info/show', locals: { record_info: record_info[0] }
+end
+
+get '/info/:id/edit' do |id|
+  record_edit = show_record(id)
+
+  erb :'info/new', locals: { edit: true, record: record_edit[0] }
 end
