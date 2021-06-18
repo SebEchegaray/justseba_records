@@ -17,12 +17,20 @@
         <li><a href="/about">About</a></li>
       </ul>
     </nav>
-    <nav class="login_nav">
-      <ul>
-        <li><a href="/signup">Sign Up</a></li>
-        <li><a href="/login">Log In</a></li>
-      </ul>
-    </nav>
+
+    <% if is_logged_in? %>
+      <form action="/sessions" method="POST" class="login_nav">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" name="Submit" value="Log Out" class="logout_input">
+      </form>
+    <% else %>
+      <nav class="login_nav">
+        <ul>
+          <li><a href="/signup">Sign Up</a></li>
+          <li><a href="/login">Log In</a></li>
+        </ul>
+      </nav>
+    <% end %>
 
     <%= yield %>
   </body>

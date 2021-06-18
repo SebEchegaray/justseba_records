@@ -102,6 +102,22 @@ html {
 .login_nav ul li:hover {
   background: rgb(50, 63, 73);
 }
+
+.error_msg {
+  font-size: 2.5rem;
+  line-height: 4rem;
+  text-transform: capitalize;
+  text-align: center;
+
+  width: 30%;
+  color: rgb(255,255,255);
+  /* background-image: linear-gradient(to right, rgba(44, 135, 209,0.8), rgba(255, 0, 0,0.5)); */
+  background: rgba(255, 0, 0,0.5);
+  box-shadow: 0 0 2rem black;
+  border-radius: 7rem;
+  margin: 4rem 0 4rem 3rem;
+  padding-left: 1rem;
+}
 /* LOGIN NAV STYLES */
 
 .main_headline {
@@ -327,6 +343,39 @@ html {
 }
 .arrow_back {
   width: 3.1rem !important;
+}
+
+/* SESSIONS STYLE / LOG OUT */
+.logout_input {
+  width: 13.5rem; height: 5.5rem;
+  text-align: center;
+  list-style-type: none;
+  color: rgb(255,255,255);
+  border-right: 1px solid rgb(255,255,255);
+  transition: all 0.2s;
+  background: transparent;
+  border: none;
+  font-family: 'Righteous', cursive;
+  font-size: 1.5rem;
+}
+.logout_input:hover {
+  color: rgb(224, 155, 26);
+  background: rgb(50, 63, 73);
+}
+
+/* ABOUT STYLE */
+.about_article {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  padding: 3rem;
+  color: rgb(255,255,255);
+}
+.js_img {
+  width: 30%;
+}
+.about_text {
+  font-size: 2rem;
 }
 
 @media screen and (max-width: 1500px) {

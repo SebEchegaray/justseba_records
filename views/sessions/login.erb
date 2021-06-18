@@ -1,0 +1,13 @@
+<h2 class="main_style-h2">Log In</h2>
+
+<h3 class="error_msg"><%= error_msg %></h3>
+
+<form action="/sessions" class="main_style-form" method="POST">
+  <label class="main_style-label" for="email">Email:</label>
+  <input type="text" name="email" class="main_style-input" value="">
+
+  <label class="main_style-label" for="password">Password:</label>
+  <input type="password" name="password" class="main_style-input" value="">
+
+  <input type="submit" name="Submit" value="Go!" class="main_style-btn-input">
+</form>

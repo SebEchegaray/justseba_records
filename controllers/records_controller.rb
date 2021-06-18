@@ -49,3 +49,7 @@ delete '/info/:id/delete' do |id|
 
   redirect '/records'
 end
+
+get '/about' do
+  erb :'info/about'
+end

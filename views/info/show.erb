@@ -6,13 +6,15 @@
     <p class="main_style-p"><span class="black_text">Label: </span><%= record_info["label"] %></p>
     <!--<a href="/new" class="main_style-btn-edit">EDIT</a>-->
     <div class="display_row">
-      <form action="/info/<%= record_info["id"] %>/edit" class="show_form">
-        <input type="submit" name="Submit" value="EDIT" class="main_style-btn-input-rev">
-      </form>
-      <form action="/info/<%= record_info["id"] %>/delete" class="show_form" method="POST">
-        <input type="hidden" name="_method" value="DELETE">
-        <input type="submit" value="DELETE" class="main_style-btn-input-rev">
-      </form>
+      <% if is_logged_in? %>
+        <form action="/info/<%= record_info["id"] %>/edit" class="show_form">
+          <input type="submit" name="Submit" value="EDIT" class="main_style-btn-input-rev">
+        </form>
+        <form action="/info/<%= record_info["id"] %>/delete" class="show_form" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" value="DELETE" class="main_style-btn-input-rev">
+        </form>
+      <% end %>
       <form action="/info"></form>
       <a href="/records" class="back_btn"><img src="https://icon-library.com/images/arrow-icon-transparent-background/arrow-icon-transparent-background-19.jpg" alt="" class="arrow_back"></a>
     </div>
