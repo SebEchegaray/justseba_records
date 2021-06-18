@@ -65,6 +65,45 @@ html {
   background: rgb(50, 63, 73);
 }
 
+/* LOGIN NAV STYLES */
+.login_nav {
+  position: absolute;
+  top: 0; right: 0;
+  height: 5.5rem;
+  background-image: linear-gradient(to right, rgb(44, 135, 209), rgba(0,0,0,1));
+  border-left: 1px solid rgb(255,255,255);
+}
+.login_nav ul {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.login_nav ul li {
+  width: 13.5rem; height: 5.5rem;
+  text-align: center;
+  list-style-type: none;
+  border-right: 1px solid rgb(255,255,255);
+  transition: all 0.2s;
+}
+.login_nav ul li:last-of-type {
+  border-left: 1px solid rgb(255,255,255);
+}
+.login_nav ul li a {
+  padding: 0.5rem 3.9rem;
+  font-size: 1.5rem;
+  line-height: 5rem;
+  color: rgb(255,255,255);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.login_nav ul li a:hover {
+  color: rgb(224, 155, 26);
+}
+.login_nav ul li:hover {
+  background: rgb(50, 63, 73);
+}
+/* LOGIN NAV STYLES */
+
 .main_headline {
   font-family: 'Monoton', cursive;
   font-weight: 400;

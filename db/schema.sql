@@ -5,3 +5,11 @@ CREATE TABLE records_info (
   year_release INT,
   artwork_url TEXT
 );
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  first_name TEXT,
+  last_name TEXT,
+  email VARCHAR,
+  password VARCHAR
+);

@@ -10,6 +10,7 @@ require_relative 'db/db'
 require_relative 'models/record'
 
 require_relative 'controllers/records_controller'
+require_relative 'controllers/users_controller'
 
 get '/' do
   erb :'info/index'
