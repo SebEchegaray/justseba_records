@@ -13,3 +13,7 @@ end
 def update_record(record_name, artist, year_release, artwork_url, label, id)
   run_sql("UPDATE records_info SET record_name = '#{record_name}', artist = '#{artist}', year_release = #{year_release}, artwork_url = '#{artwork_url}', label = '#{label}' WHERE id = #{id}")
 end
+
+def delete_record(id)
+  run_sql("DELETE FROM records_info WHERE id = #{id}")
+end

@@ -23,7 +23,7 @@ html {
 
 /* MAIN HEADER */
 .main_header {
-  width: 100%; height: 35rem;
+  width: 100%; height: 46rem;
   margin-bottom: 3rem;
   box-shadow: 0 0.3rem 0.8rem rgba(255,255,255,0.8);
   background-image: url('https://bavotasan.com/wp-content/uploads/2008/11/record-set.png');
@@ -92,7 +92,6 @@ html {
   position: fixed;
   bottom: 1%;
   right: 0.5%;
-  /* padding: 1rem 2rem; */
   padding: 0.5rem;
   text-decoration: none;
   font-size: 1.7rem;
@@ -101,16 +100,36 @@ html {
   border: 1px solid rgb(255,255,255);
   box-shadow: 0 0 0.5rem rgb(255,255,255);
   border-radius: 5px;
-  background: rgb(44, 135, 209);
+  background: rgb(221, 88, 88);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1000;
   transition: all 0.2s;
 }
 .record_link:hover {
   color: rgb(44, 135, 209);
-  /* background: rgb(50, 63, 73); */
   background: rgb(255,255,255);
 }
+.record_link:hover > .add_record_vinyl {
+  /* height: 6rem; */
+  width: 6rem;
+  left: 0;
+}
+.record_link:hover > .add_record_sign {
+  left: 0;
+  transform: none;
+}
 .add_record_vinyl {
-  width: 7rem;
+  position: relative;
+  width: 0;
+  transition: all 0.2s;
+}
+.add_record_sign {
+  position: relative;
+  left: 50%; transform: translateX(-50%);
+  height: 3.5rem;
+  transition: all 0.25s;
 }
 
 .records_grid {
@@ -138,7 +157,7 @@ html {
   background: rgb(50, 63, 73);
 }
 .each_record img {
-  width: 22rem;
+  height: 22rem;
 }
 .each_record-link {
   text-decoration: none;
@@ -249,4 +268,51 @@ html {
 .black_text {
   color: rgb(0,0,0);
   font-weight: 600;
+}
+
+.display_row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.back_btn {
+  margin-top: 5rem;
+  padding: 0 2rem;
+  border-radius: 0.55rem;
+  background: rgb(255,255,255);
+  transition: all 0.15s;
+}
+.back_btn:hover {
+  background: rgb(253, 196, 91);
+  box-shadow: 0 0 0.5rem rgb(255,255,255);
+}
+.arrow_back {
+  width: 3.1rem !important;
+}
+
+@media screen and (max-width: 1500px) {
+  .show {
+    gap: 4rem;
+  }
+  .show img {
+    width: 40rem;
+  }
+  .show .main_style-h3 {
+    font-size: 7rem;
+    line-height: 9rem;
+    text-transform: capitalize;
+  }
+  .show .main_style-p {
+    font-size: 4rem;
+    line-height: 6rem;
+  }
+  .show .black_text {
+    font-size: 3rem;
+  }
+  .show_form {
+    margin-top: 3rem;
+  }
+  .back_btn {
+    margin-top: 3rem;
+  }
 }

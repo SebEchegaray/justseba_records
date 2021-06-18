@@ -1,8 +1,9 @@
-     
 require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'pry' if development?
 require 'pg'
+
+enable :sessions
 
 require_relative 'db/db'
 

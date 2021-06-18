@@ -43,3 +43,9 @@ put '/new/:id/edit' do |id|
 
   redirect "/view/#{id}"
 end
+
+delete '/info/:id/delete' do |id|
+  delete_record(id)
+
+  redirect '/records'
+end
