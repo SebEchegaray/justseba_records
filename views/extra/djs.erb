@@ -1,0 +1,10 @@
+<h2 class="main_style-h2">DJs</h2>
+<hr>
+
+<section class="each_store">
+  <% djs.each do |dj|%>
+    <h3 class="main_style-h3"><%= dj["name"] %></h3>
+    <p class="main_style-p" style="text-transform: lowercase;"><%= dj["url"] %></p>
+    <hr>
+  <% end %>
+</section>

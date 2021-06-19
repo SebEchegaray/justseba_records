@@ -1,0 +1,10 @@
+<h2 class="main_style-h2">Record Stores</h2>
+<hr>
+
+<section class="each_store">
+  <% stores.each do |store|%>
+    <h3 class="main_style-h3"><%= store["name"] %></h3>
+    <p class="main_style-p"><%= store["address"] %></p>
+    <hr>
+  <% end %>
+</section>

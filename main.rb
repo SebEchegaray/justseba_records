@@ -12,10 +12,12 @@ require_relative 'helpers/sessions_helper'
 
 require_relative 'models/record'
 require_relative 'models/user'
+require_relative 'models/extra'
 
 require_relative 'controllers/records_controller'
 require_relative 'controllers/users_controller'
 require_relative 'controllers/sessions_controller'
+require_relative 'controllers/extras_controller'
 
 get '/' do
   erb :'info/index'
