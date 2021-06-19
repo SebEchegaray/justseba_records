@@ -6,11 +6,13 @@
 <% end %>
 
 <h2 class="main_style-h2">New record</h2>
+<hr>
 
 <form action="<%= form_action %>" method="POST" class="main_style-form">
   <% if edit %>
     <input type="hidden" name="_method" value="PUT">
   <% end %>
+
   <label class="main_style-label" for="record_name">Record name:</label>
   <input type="text" name="record_name" class="main_style-input" value="<% if edit %><%= record["record_name"] %><% end %>">
 

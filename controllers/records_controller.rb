@@ -53,3 +53,34 @@ end
 get '/about' do
   erb :'info/about'
 end
+
+# SEARCH TRY
+# get '/search' do
+#   wrapper = Discogs::Wrapper.new("JUST SEBA Records")
+
+#   artist          = wrapper.get_artist("329937")
+#   artist_releases = wrapper.get_artist_releases("329937")
+#   release         = wrapper.get_release("1529724")
+#   label           = wrapper.get_label("29515")
+
+#   auth_wrapper = Discogs::Wrapper.new("JUST SEBA Records", user_token: "my_user_token")
+#   search = auth_wrapper.search("Necrovore", :per_page => 10, :type => :artist)
+
+#   erb :'info/search', locals: { search: artist }
+# end
+
+post '/info/search' do
+  wrapper = Discogs::Wrapper.new("JUST SEBA Records")
+
+  record_more_info = params[:record]
+
+  artist          = wrapper.get_artist("329937")
+  artist_releases = wrapper.get_artist_releases("329937")
+  release         = wrapper.get_release("1529724")
+  label           = wrapper.get_label("29515")
+
+  auth_wrapper = Discogs::Wrapper.new("JUST SEBA Records", user_token: "my_user_token")
+  search = auth_wrapper.search("Necrovore", :per_page => 10, :type => :artist)
+
+  erb :'info/search', locals: { search: search, artist: artist }
+end
